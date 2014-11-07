@@ -1,0 +1,12 @@
+
+il faut metre l'option use_dns(yes) a la fin du bloc option
+il faut configurer le /etc/resolv.conf pour qu'il match le serveur dns 
+le server dns est le serveur qui permet de faire le match entre l'ip du serveur pour qui les logs seront rapratier avec son 
+FDNQ
+ajouter dans le rsyslog des serveurs a recuper les log l'option
+*.*   @ip_serveur_syslog:port  ( log via le protocol UDP)
+ou via tcp avec
+*.*  @@ip_server_syslog:port 
+exemple :
+*.*  @1.1.1.1:514 
+*.* @@1.1.1.1:514
