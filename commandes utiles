@@ -1,0 +1,2 @@
+du -sm *.log | sort -n | tail -n 20 
+affiche la taille en mo des log et faire une sorti sur les dix premieres sorties  
